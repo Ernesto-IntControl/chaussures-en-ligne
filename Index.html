@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boutique Chaussures</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS Animate On Scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-beige shadow-sm">
+    <div class="container">
+      <a class="navbar-brand text-primary fw-bold" href="#">Chaussures Shop</a>
+      <form class="d-flex ms-auto" id="searchForm">
+        <input class="form-control me-2" type="search" placeholder="Rechercher..." id="searchInput">
+        <button class="btn btn-outline-primary" type="submit">Rechercher</button>
+      </form>
+      <div class="dropdown ms-3">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="categoryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          Catégorie
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+          <li><a class="dropdown-item" href="#" data-category="all">Toutes</a></li>
+          <li><a class="dropdown-item" href="#" data-category="Homme">Homme</a></li>
+          <li><a class="dropdown-item" href="#" data-category="Femme">Femme</a></li>
+          <li><a class="dropdown-item" href="#" data-category="Sport">Sport</a></li>
+        </ul>
+      </div>
+      <select class="form-select ms-3" id="sortSelect">
+        <option value="default">Tri par défaut</option>
+        <option value="asc">Prix croissant</option>
+        <option value="desc">Prix décroissant</option>
+      </select>
+      <button class="btn btn-outline-success ms-3 position-relative">
+        🛒 <span class="badge bg-danger" id="cartCount">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Container -->
+  <div class="container my-5">
+    <div class="row" id="shoesContainer">
+      <!-- Chaussures générées par JS -->
+    </div>
+  </div>
+
+  <footer class="text-center py-4 bg-beige">
+    <p class="mb-0">&copy; 2025 Boutique Chaussures. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
